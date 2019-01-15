@@ -25,16 +25,41 @@ export default {
   padding: 0;
 }
 
+.is-active {
+  color: #f2f2f2 !important;
+}
+
 /* Global classes */
+.f-center {
+  display: flex;
+  justify-content: center;
+}
 .f-center-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.f-center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.f-space-b-c {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .text-nrml-bold {
   font-weight: bold;
   line-height: normal;
   font-style: normal;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+}
+.margin-sides {
+  margin: 0 30px;
 }
 
 </style>

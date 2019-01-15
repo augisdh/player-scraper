@@ -128,6 +128,9 @@ export default {
           alert(`Oops. ${err.message}`)
         })
     }
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.setBackgoundStyle)
   }
 }
 </script>
@@ -145,13 +148,11 @@ export default {
   flex-grow: 1;
   height: 100%;
 }
-
 .login-content {
   position: relative;
   margin: 79px 54px 54px 54px;
   z-index: 5;
 }
-
 .login-header {
   max-width: 439px;
   min-width: 200px;
@@ -189,9 +190,7 @@ export default {
   .secondPass {
     margin-top: 15px;
   }
-  input::placeholder,
-  input:-ms-input-placeholder,
-  input::-moz-placeholder, {
+  ::placeholder {
     color: #BDBDBD;
   }
   input:active,
@@ -252,7 +251,6 @@ export default {
   }
 
 .right-wrapper {
-  display: block;
   position: relative;
   height: 100%;
 }
@@ -337,7 +335,6 @@ export default {
   .btn-box > h4 {
     color: #fff;
   }
-
   .right-wrapper {
     display: none;
   }
@@ -375,5 +372,4 @@ export default {
       font-size: 10px;
     }
 }
-
 </style>

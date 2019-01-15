@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LogIn from '@/components/LogIn'
 import MainApp from '@/components/MainApp'
+import About from '@/components/About'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -20,9 +21,18 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/app/about',
+      name: 'About',
+      component: About,
+      meta: {
+        requiresAuth: true
+      }
     }
   ],
-  mode: 'history'
+  mode: 'history',
+  linkExactActiveClass: 'is-active'
 })
 
 router.beforeEach((to, from, next) => {
